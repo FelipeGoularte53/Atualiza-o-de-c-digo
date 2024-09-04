@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        td input, td textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        td textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group {
+            text-align: center;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Cliente</h1>
+        <form id="clientForm">
+            <table>
+                <tr>
+                    <td><label for="name">Nome:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Telefone:</label></td>
+                    <td><input type="tel" id="phone" name="phone"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Endereço:</label></td>
+                    <td><input type="text" id="address" name="address"></td>
+                </tr>
+                <tr>
+                    <td><label for="comments">Comentários:</label></td>
+                    <td><textarea id="comments" name="comments"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="form-group">
+                        <button type="submit">Cadastrar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('clientForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Cadastro realizado com sucesso!');
+        });
+    </script>
+</body>
+</html>
